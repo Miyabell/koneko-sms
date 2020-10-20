@@ -13,5 +13,6 @@ connection.on('initActivity', function(data) {
 
 // Save Sequence
 connection.on('clickedNext', function() {
-	connection.trigger('updateActivity', configuration);
+	var configurationS = configuration;
+	connection.trigger('updateActivity', configurationS);
 });
