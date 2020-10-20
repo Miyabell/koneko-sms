@@ -1,7 +1,7 @@
 var connection = new Postmonger.Session();
 // Getting configuration file
-//var configFile = require('./demo-data/activity.json');
-//var configuration = JSON.stringify(configFile);
+var configFile = require('./demo-data/activity.json');
+var configuration1 = JSON.stringify(configFile);
 
 //Startup Sequence
 connection.trigger('ready');
