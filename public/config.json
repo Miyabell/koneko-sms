@@ -18,8 +18,8 @@
 	},
 	"userInterfaces": {
 		"configModal": {
-			"height": 500,
-			"width": 600
+			"height": 501,
+			"width": 601
 		}
 	}
 }
