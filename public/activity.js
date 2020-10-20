@@ -1,9 +1,8 @@
 var connection = new Postmonger.Session();
 // Getting configuration file
-var configFile = require('./public/activity.json');
+// var configFile = require('./public/activity.json');
 //var configuration1 = JSON.stringify(configFile);
 
-/*
 var config = {
                 "name": "",
                                   "id": null,
@@ -47,7 +46,6 @@ var config = {
                 ],
                 "errors": []
               };
-*/
 
 //Startup Sequence
 connection.trigger('ready');
@@ -59,7 +57,7 @@ connection.on('initActivity', function(data) {
 // Save Sequence
 connection.on('clickedNext', function() {
 	//var configuration = JSON.parse(document.getElementById('configuration').value);
-	connection.trigger('updateActivity', configFile);
+	connection.trigger('updateActivity', config);
 });
 
 f
