@@ -12,8 +12,8 @@
 	},
 	"lang": {
 		"en-US": {
-			"name": "Custom Configuration",
-			"description": "Custom Activity to copy-paste config.json"
+			"name": "Send SMS",
+			"description": "Custom Activity to send SMS from third-party app"
 		}
 	},
 	"userInterfaces": {
