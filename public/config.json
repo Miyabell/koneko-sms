@@ -2,7 +2,7 @@
 	"workflowApiVersion": "1.0",
 	"metaData": {
 		"icon": "icon.png",
-		"category": "message"
+		"category": "custom"
 	},
 	"type": "REST",
 	"userInterface": {
@@ -12,8 +12,8 @@
 	},
 	"lang": {
 		"en-US": {
-			"name": "Koneko Heroku Activity",
-			"description": "This is Heroku Test Activity"
+			"name": "Send SMS",
+			"description": "Send SMS using third-party app."
 		}
 	},
 	"userInterfaces": {
