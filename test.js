@@ -45,4 +45,5 @@ var config = `{
                 "errors": []
               }`;
 
-console.log(JSON.parse(config));
+var jsonObj = JSON.parse(config);
+console.log(jsonObj.arguments.execute.inArguments);
