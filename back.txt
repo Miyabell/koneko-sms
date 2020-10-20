@@ -1,0 +1,43 @@
+	"arguments": {
+		"execute": {
+			"inArguments": [{
+				"contactKey": "{{Contact.Key}}",
+				"Id": "{{Contact.Attribute.JourneyEntrySource.id}}",
+				"FirstName": "{{Contact.Attribute.JourneyEntrySource.first_name}}",
+				"LastName": "{{Contact.Attribute.JourneyEntrySource.last_name}}",
+				"Email": "{{Contact.Attribute.JourneyEntrySource.email}}"
+			}],
+			"outArguments": [],
+			"useJwt": true,
+			"url": "https://ae85c51f4adedab59d9f31a82cf76dfc.m.pipedream.net"
+		}
+	},
+
+
+///////////////////////////////////////////////////////////
+
+{
+	"workflowApiVersion": "1.0",
+	"metaData": {
+		"icon": "icon.png",
+		"category": "message"
+	},
+	"type": "REST",
+	"userInterface": {
+		"configInspector": {
+			"size": "medium"
+		}
+	},
+	"lang": {
+		"en-US": {
+			"name": "Koneko Heroku Activity",
+			"description": "This is Heroku Test Activity"
+		}
+	},
+	"userInterface": {
+		"configModal": {
+			"height": 500,
+			"width": 600
+		}
+	}
+}

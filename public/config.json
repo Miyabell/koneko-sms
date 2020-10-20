@@ -1,0 +1,25 @@
+{
+	"workflowApiVersion": "1.0",
+	"metaData": {
+		"icon": "icon.png",
+		"category": "message"
+	},
+	"type": "REST",
+	"userInterface": {
+		"configInspector": {
+			"size": "medium"
+		}
+	},
+	"lang": {
+		"en-US": {
+			"name": "Koneko Heroku Activity",
+			"description": "This is Heroku Test Activity"
+		}
+	},
+	"userInterfaces": {
+		"configModal": {
+			"height": 500,
+			"width": 600
+		}
+	}
+}
