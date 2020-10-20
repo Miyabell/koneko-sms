@@ -12,14 +12,14 @@
 	},
 	"lang": {
 		"en-US": {
-			"name": "Send SMS",
-			"description": "Send SMS using third-party app."
+			"name": "Custom Configuration",
+			"description": "Custom Activity to copy-paste config.json"
 		}
 	},
 	"userInterfaces": {
 		"configModal": {
-			"height": 501,
-			"width": 601
+			"height": 500,
+			"width": 600
 		}
 	}
 }

@@ -1,8 +1,5 @@
 var connection = new Postmonger.Session();
 
-var configFile = require('./demo-data/activity.json');
-var configuration = JSON.stringify(configFile);
-
 //Startup Sequence
 connection.trigger('ready');
 
@@ -14,5 +11,6 @@ connection.on('initActivity', function(data) {
 // Save Sequence
 connection.on('clickedNext', function() {
 	var configuration = JSON.parse(document.getElementById('configuration').value);
+	console.log(configuration);
 	connection.trigger('updateActivity', configuration);
 });
