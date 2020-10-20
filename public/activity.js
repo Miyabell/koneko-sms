@@ -3,7 +3,7 @@ var connection = new Postmonger.Session();
 //var configFile = require('. /activity.json');
 //var configuration1 = JSON.stringify(configFile);
 
-var config = {
+var config = `{
                 "name": "",
                                   "id": null,
                                   "key": "REST-1",
@@ -45,13 +45,13 @@ var config = {
                   }
                 ],
                 "errors": []
-              };
+              }`;
 
 //Startup Sequence
 connection.trigger('ready');
 
 connection.on('initActivity', function(data) {
-	document.getElementById('configuration').value = JSON.stringify(config, null, 2);
+	document.getElementById('configuration').value = JSON.stringify(data, null, 2);
 });
 
 // Save Sequence
