@@ -51,8 +51,7 @@ var config = `{
 connection.trigger('ready');
 
 connection.on('initActivity', function(data) {
-    console.log(JSON.stringify(data, null, 2));
-	document.getElementById('configuration').value = JSON.stringify(data, null, 2);
+	document.getElementById('configuration').value = JSON.stringify(config, null, 2);
 });
 
 // Save Sequence
