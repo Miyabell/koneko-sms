@@ -8,7 +8,8 @@
         {"contactKey": "{{Contact.Key}}"},
         {"first_name": "{{Contact.Attribute.bg_marketing_test.first_name}}"},
         {"last_name": "{{Contact.Attribute.bg_marketing_test.last_name}}"},
-        {"email": "{{Contact.Attribute.bg_marketing_test.email}}"}
+        {"email": "{{Contact.Attribute.bg_marketing_test.email}}"},
+        {"phone": "{{Contact.Attribute.bg_marketing_test.phone}}"}
       ],
       "url": "https://enz3kkxiw5fpq.x.pipedream.net/"
     }
