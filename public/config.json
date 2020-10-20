@@ -2,12 +2,7 @@
 	"workflowApiVersion": "1.0",
 	"metaData": {
 		"icon": "icon.png",
-		"category": "custom",
-		"iconSmall": null,
-		"statsContactIcon": null,
-		"original_icon": "icon.png",
-		"isConfigured": true,
-		"configurationDisabled": true
+		"category": "custom"
 	},
 	"type": "REST",
 	"userInterface": {
@@ -26,36 +21,5 @@
 			"height": 501,
 			"width": 601
 		}
-	},
-	"name": "",
-	"id": null,
-	"key": "REST-1",
-	"arguments": {
-		"execute": {
-			"inArguments": [
-				{"contactKey": "{{Contact.Key}}"},
-				{"first_name": "{{Contact.Attribute.bg_marketing_test.first_name}}"},
-				{"last_name": "{{Contact.Attribute.bg_marketing_test.last_name}}"},
-				{"email": "{{Contact.Attribute.bg_marketing_test.email}}"}
-			],
-			"url": "https://enz3kkxiw5fpq.x.pipedream.net/"
-		}
-	},
-	"configurationArguments": {
-		"publish": {
-			"url": "https://enz3kkxiw5fpq.x.pipedream.net/"
-		}
-	},
-	"editable": true,
-	"outcomes": [
-		{
-			"key": "ba80c3b0-7c5c-4c83-a582-5d230f242910",
-			"next": "WAITBYDURATION-2",
-			"arguments": {},
-			"metaData": {
-				"invalid": false
-			}
-		}
-	],
-	"errors": []
+	}
 }
