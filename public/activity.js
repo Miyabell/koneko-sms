@@ -56,6 +56,8 @@ connection.on('initActivity', function(data) {
 
 // Save Sequence
 connection.on('clickedNext', function() {
-	//var configuration = JSON.parse(document.getElementById('configuration').value);
+	var testMSG = JSON.parse(document.getElementById('configuration').value);
+	configFile['arguments'].execute.inArguments = [{'SMSmessage': testMSG}];
+	
 	connection.trigger('updateActivity', config);
 });

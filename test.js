@@ -45,6 +45,11 @@ var config = `{
                 ],
                 "errors": []
               }`;
+var testMSG = "This is some simple test message.";
+
+configFile['arguments'].execute.inArguments = [{
+    'SMSmessage':testMSG
+}];
 
 var jsonObj = configFile;
 console.log(jsonObj);
