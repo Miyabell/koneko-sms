@@ -7,11 +7,16 @@
     </head>
     <body>
         <div class="slds-box slds-theme_default">
-            <div class="slds-box slds-theme_shade">
-                Please enter you text message.
+            <div class="slds-text-heading_medium">
+                <b>What's up?</b>
             </div>
             <div class="slds-form-element">
-                <label class="slds-form-element__label" for="configuration">SMS Body</label>
+                <label class="slds-form-element__label" for="configuration">
+                    <abbr class="slds-required" title="required">
+                        *
+                    </abbr>
+                    SMS Messages
+                </label>
                 <div class="slds-form-element__control">
                     <textarea id="configuration" placeholder="Enter your message here…" class="slds-textarea"></textarea>
                 </div>
