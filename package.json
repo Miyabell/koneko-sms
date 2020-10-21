@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "@salesforce-ux/design-system": "^2.13.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jQuery": "^1.7.4"
   },
   "devDependencies": {},
   "keywords": [
