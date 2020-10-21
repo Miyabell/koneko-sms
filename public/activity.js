@@ -1,6 +1,6 @@
 var connection = new Postmonger.Session();
 // Getting configuration file
-var configFile = require('./activity.json');
+var configFile = require('activity.json');
 //var configuration1 = JSON.stringify(configFile);
 
 /* var config = {
