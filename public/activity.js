@@ -61,7 +61,16 @@ connection.on('clickedNext', function() {
 	//var testMSG = document.getElementById('message').value;
 	// Adding new value to payload
 	var testMSG = "Test";
-	configFile['arguments'].execute.inArguments = [{'SMSmessage': testMSG}];
+	// Modyfing payload
+	configFile['arguments'].execute.inArguments = [{
+                "SMSmessage": testMSG,
+                "contactKey": "{{Contact.Key}}",
+                "first_name": "{{Contact.Attribute.bg_marketing_test.first_name}}",
+                "last_name": "{{Contact.Attribute.bg_marketing_test.last_name}}",
+                "email": "{{Contact.Attribute.bg_marketing_test.email}}",
+                "phone": "{{Contact.Attribute.bg_marketing_test.phone}}"
+                }];
+
     //Saving configuration
 	connection.trigger('updateActivity', configFile);
 });

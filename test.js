@@ -48,11 +48,13 @@ var config = `{
 var testMSG = "This is some simple test message.";
 
 configFile['arguments'].execute.inArguments = [{
-    'SMSmessage':testMSG
-}];
+            "SMSmessage": testMSG,
+            "contactKey": "{{Contact.Key}}",
+            "first_name": "{{Contact.Attribute.bg_marketing_test.first_name}}",
+            "last_name": "{{Contact.Attribute.bg_marketing_test.last_name}}",
+            "email": "{{Contact.Attribute.bg_marketing_test.email}}",
+            "phone": "{{Contact.Attribute.bg_marketing_test.phone}}"
+            }];
 
-var jsonObj = configFile;
-console.log(jsonObj);
-
-
-console.log(testMSG)
+//var jsonObj = JSON.stringify(configFile);
+console.log(configFile['arguments'].execute.inArguments);
