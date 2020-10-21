@@ -1,6 +1,5 @@
 // TESTING FILE
 //   NODE TEST.JS IN CMD
-
 var configFile = require('./public/activity.json');
 var config = `{
                 "name": "",
@@ -45,6 +44,7 @@ var config = `{
                 ],
                 "errors": []
               }`;
+
 var testMSG = "This is some simple test message.";
 
 configFile['arguments'].execute.inArguments = [{
@@ -53,3 +53,6 @@ configFile['arguments'].execute.inArguments = [{
 
 var jsonObj = configFile;
 console.log(jsonObj);
+
+
+console.log(testMSG)
