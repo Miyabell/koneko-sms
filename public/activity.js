@@ -51,7 +51,7 @@ var configFile = require('./public/activity.json');
 connection.trigger('ready');
 
 connection.on('initActivity', function(data) {
-	document.getElementById('configuration').value = JSON.stringify(data, null, 2);
+	document.getElementById('message').value = JSON.stringify(data, null, 2);
 });
 
 // Save Sequence
