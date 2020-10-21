@@ -1,3 +1,7 @@
 html {
     background: white !important;
 }
+
+body {
+    margin: 16px !important;
+}
