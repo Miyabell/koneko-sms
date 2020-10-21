@@ -7,7 +7,7 @@
 	"type": "REST",
 	"userInterface": {
 		"configInspector": {
-			"size": "medium"
+			"size": "small"
 		}
 	},
 	"lang": {
