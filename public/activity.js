@@ -58,8 +58,9 @@ connection.on('initActivity', function(data) {
 connection.on('clickedNext', function() {
 
     // Getting and parsing content of textarea
-	var testMSG = document.getElementById('message').value;
+	//var testMSG = document.getElementById('message').value;
 	// Adding new value to payload
+	var testMSG = "Test";
 	configFile['arguments'].execute.inArguments = [{'SMSmessage': testMSG}];
     //Saving configuration
 	connection.trigger('updateActivity', configFile);
