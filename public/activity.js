@@ -1,9 +1,9 @@
 var connection = new Postmonger.Session();
 // Getting configuration file
-// var configFile = require('./public/activity.json');
+var configFile = require('./public/activity.json');
 //var configuration1 = JSON.stringify(configFile);
 
-var config = {
+/* var config = {
                 "name": "",
                                   "id": null,
                                   "key": "REST-1",
@@ -45,7 +45,7 @@ var config = {
                   }
                 ],
                 "errors": []
-              };
+              }; */
 
 //Startup Sequence
 connection.trigger('ready');
@@ -56,8 +56,11 @@ connection.on('initActivity', function(data) {
 
 // Save Sequence
 connection.on('clickedNext', function() {
-	var testMSG = JSON.parse(document.getElementById('configuration').value);
+
+    // Getting and parsing content of textarea
+	var testMSG = document.getElementById('message').value;
+	// Adding new value to payload
 	configFile['arguments'].execute.inArguments = [{'SMSmessage': testMSG}];
-	
-	connection.trigger('updateActivity', config);
+    //Saving configuration
+	connection.trigger('updateActivity', configFile);
 });
