@@ -1,5 +1,5 @@
 {
-  "name": "koneko-mc",
+  "name": "koneko-sms",
   "version": "1.0.0",
   "description": "This is test package",
   "main": "app.js",
@@ -14,6 +14,12 @@
   "author": "Koneko",
   "license": "ISC",
   "dependencies": {
+    "@salesforce-ux/design-system": "^2.13.6",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "send",
+    "sms"
+  ]
 }
