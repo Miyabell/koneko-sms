@@ -1,18 +1,30 @@
-var connection = new Postmonger.Session();
-var payload = {};
-
-//Startup Sequence
-connection.trigger('ready');
-
-connection.on('initActivity', function(data) {
-    payload = data;
-	//document.getElementById('message').value = JSON.stringify(data, null, 2);
-});
-
-// Save Sequence
-connection.on('clickedNext', function() {
     //Getting and parsing content of textarea
-    var testMSG = document.getElementById('message').value;
+    var testMSG = "Test";
+    var payload = {
+                    "name": "",
+                    "id": null,
+                    "key": "REST-2",
+                    "type": "REST",
+                    "arguments": {},
+                    "configurationArguments": {},
+                    "metaData": {
+                      "icon": "https://koneko-mc.herokuapp.com/icon.png",
+                      "category": "custom",
+                      "iconSmall": null,
+                      "statsContactIcon": null,
+                      "original_icon": "icon.png"
+                    },
+                    "editable": true,
+                    "outcomes": [
+                      {
+                        "next": "WAITBYDURATION-2",
+                        "metaData": {
+                          "invalid": false
+                        }
+                      }
+                    ],
+                    "errors": null
+                  };
 
 	// Creating payload
 	payload['arguments'] = payload['arguments'] || {};
@@ -34,6 +46,4 @@ connection.on('clickedNext', function() {
     payload['metaData'] = payload['metaData'] || {};
     payload['metaData'].isConfigured = true;
 
-    //Saving configuration
-	connection.trigger('updateActivity', payload);
-});
+    console.log(payload);
