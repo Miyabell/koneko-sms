@@ -1,3 +1,4 @@
 # koneko-heroku
-Custom Activity build  with Heroku and node.js
-Basic example - allows you to set Custom Activity initial configuration.
+Custom Activity used to send SMS with third-party-app.
+
+It's using lighting design system, textarea with characters limit.
