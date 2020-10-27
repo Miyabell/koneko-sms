@@ -1,11 +1,12 @@
 var connection = new Postmonger.Session();
 var payload = {};
-var msg = 'test';
+var msg = '';
 //Startup Sequence
 connection.trigger('ready');
 
 connection.on('initActivity', function(data) {
     payload = data;
+    msg = payload['arguments'].execute.inArguments.SMSmessage;
 	document.getElementById('message').value = msg;
 });
 
