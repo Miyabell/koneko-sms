@@ -1,5 +1,6 @@
 const textarea = document.querySelector("textarea");
 
+//Display characters limit on window load
 window.addEventListener("load", event => {
     const target = document.querySelector("textarea");
     const maxLength = target.getAttribute("maxlength");
@@ -16,8 +17,10 @@ window.addEventListener("load", event => {
     document.getElementById('charNum').innerHTML = charCount + " chars left.";
 });
 
+//Display characters limit on edit
 textarea.addEventListener("input", event => {
     const target = event.currentTarget;
+    //Get TextArea MaxLength from index.html
     const maxLength = target.getAttribute("maxlength");
     const currentLength = target.value.length;
 

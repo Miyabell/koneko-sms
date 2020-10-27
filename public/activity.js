@@ -1,11 +1,17 @@
+//Creating new connection with postmonger.js
 var connection = new Postmonger.Session();
+
 var payload = {};
 var msg = '';
+
 //Startup Sequence
 connection.trigger('ready');
 
+//Displaying saved SMS configuration
 connection.on('initActivity', function(data) {
+    // "data" object is send by Journey Builder
     payload = data;
+    // Getting SMSmessage parameter value
     msg = data['arguments'].execute.inArguments[0].SMSmessage;
 	document.getElementById('message').value = msg;
 });
@@ -15,7 +21,7 @@ connection.on('clickedNext', function() {
     //Getting and parsing content of textarea
     var testMSG = document.getElementById('message').value;
 
-	// Creating payload
+	// Creating payload to update Custom Activity Configuration
 	payload['arguments'] = payload['arguments'] || {};
 	payload['arguments'].execute = payload['arguments'].execute || {};
 	payload['arguments'].execute.inArguments = [{
