@@ -7,7 +7,7 @@ connection.trigger('ready');
 connection.on('initActivity', function(data) {
     payload = data;
     msg = data['arguments'].execute.inArguments[0].SMSmessage;
-	document.getElementById('message').value = JSON.stringify(msg);
+	document.getElementById('message').value = msg;
 });
 
 // Save Sequence
