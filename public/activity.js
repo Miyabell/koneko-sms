@@ -1,6 +1,6 @@
 var connection = new Postmonger.Session();
 var payload = {};
-var msg = '';
+var msg = 'test';
 //Startup Sequence
 connection.trigger('ready');
 
@@ -13,7 +13,6 @@ connection.on('initActivity', function(data) {
 connection.on('clickedNext', function() {
     //Getting and parsing content of textarea
     var testMSG = document.getElementById('message').value;
-    msg = testMSG;
 
 	// Creating payload
 	payload['arguments'] = payload['arguments'] || {};
