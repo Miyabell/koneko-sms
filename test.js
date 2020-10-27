@@ -45,7 +45,7 @@ var config = `{
                 "errors": []
               }`;
 
-var testMSG = "This is some simple test message.";
+var testMSG = "";
 
 configFile['arguments'].execute.inArguments = [{
             "SMSmessage": testMSG,
@@ -57,32 +57,5 @@ configFile['arguments'].execute.inArguments = [{
             }];
 
 //var jsonObj = JSON.stringify(configFile);
-console.log(configFile['arguments'].execute.inArguments);
-
-// KayPaxowy kod
-var getUrl = window.location;
-
-function getJSON(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status === 200) {
-        callback(null, xhr.response);
-      } else {
-        callback(status, xhr.response);
-      }
-    };
-    xhr.send();
-};
-
-getJSON(getUrl + '/activity.json',
-function(err, data) {
-  if (err !== null) {
-    console.log('Something went wrong: ' + err);
-  } else {
-    console.log('Ok', data);
-  }
-});
-
+console.log(typeof configFile['arguments'].execute.inArguments.SMSmessage);
+console.log((configFile['arguments'].execute.inArguments[0].SMSmessage));
